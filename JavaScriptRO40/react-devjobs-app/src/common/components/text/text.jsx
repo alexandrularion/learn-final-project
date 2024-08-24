@@ -1,7 +1,7 @@
-import Container from "./template.styled";
+import Container from "./text.styled";
 
-const Text = () => {
-  return <Container>Template component</Container>;
+const Text = (props) => {
+  return <Container>{props.children}</Container>;
 };
 
 export default Text;

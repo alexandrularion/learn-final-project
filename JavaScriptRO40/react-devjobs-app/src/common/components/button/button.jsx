@@ -1,7 +1,7 @@
-import Container from "./template.styled";
+import Container from "./button.styled";
 
-const Button = () => {
-  return <Container>Button</Container>;
+const Button = (props) => {
+  return <Container variant={props.variant}>{props.children}</Container>;
 };
 
 export default Button;

@@ -1,7 +1,11 @@
-import Container from "./template.styled";
+import Container from "./heading.styled";
 
-const Heading = () => {
-  return <Container>Template component</Container>;
+const Heading = (props) => {
+  return (
+    <Container as={props.as} size={props.size}>
+      {props.children}
+    </Container>
+  );
 };
 
 export default Heading;
