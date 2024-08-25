@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.button`
   display: flex;
+  width: max-content;
   padding: 16px 39px;
   border-radius: 5px;
   font-size: var(--text-font-size);

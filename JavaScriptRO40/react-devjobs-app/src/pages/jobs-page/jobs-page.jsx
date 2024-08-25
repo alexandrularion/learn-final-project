@@ -2,6 +2,7 @@ import Container from "./jobs-page.styled";
 import AppLayout from "../../common/layouts/app-layout/app-layout";
 import Search from "../../components/search/search";
 import JobCard from "../../components/job-card/job-card";
+import Button from "../../common/components/button/button";
 
 const JobsPage = () => {
   return (
@@ -16,6 +17,7 @@ const JobsPage = () => {
           companyName="Mystery company"
           companyLogo="https://marketplace.canva.com/EAE0rNNM2Fg/1/0/1600w/canva-letter-c-trade-marketing-logo-design-template-r9VFYrbB35Y.jpg"
         />
+        <Button>Load more</Button>
       </Container>
     </AppLayout>
   );
