@@ -10,6 +10,7 @@ const Container = styled.button`
   outline: none;
   appearance: none;
   border: none;
+  transition: 0.2s all ease-in-out;
   background-color: ${(props) => {
     switch (props.variant) {
       case "filled":
@@ -30,6 +31,19 @@ const Container = styled.button`
         return "var(--button-text-color-1)";
     }
   }};
+
+  &:hover {
+    background-color: ${(props) => {
+      switch (props.variant) {
+        case "filled":
+          return "var(--button-background-hover-color-1)";
+        case "shaded":
+          return "var(--button-background-hover-color-2)";
+        default:
+          return "var(--button-background-hover-color-1)";
+      }
+    }};
+  }
 `;
 
 export default Container;

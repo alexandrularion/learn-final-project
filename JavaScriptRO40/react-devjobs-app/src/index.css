@@ -28,6 +28,7 @@ a {
 
   --badge-color: #5964e0;
   --icon-color: #5964e0;
+  --checkbox-background-color: #e7e8e9;
 
   --heading-font-size-1: 28px;
   --heading-font-size-2: 24px;
@@ -44,7 +45,9 @@ a {
   --text-font-weight: 400;
 
   --button-background-color-1: #5964e0;
+  --button-background-hover-color-1: #939bf4;
   --button-background-color-2: rgba(89, 100, 224, 0.1);
+  --button-background-hover-color-2: rgba(89, 100, 224, 0.35);
   --button-text-color-1: #fff;
   --button-text-color-2: #5964e0;
   --button-font-weight: 700;
@@ -57,5 +60,9 @@ a {
 
     --heading-color: #fff;
     --text-color: #6e8098;
+
+    --button-background-color-2: rgba(255, 255, 255, 0.1);
+    --button-background-hover-color-2: rgba(255, 255, 255, 0.35);
+    --checkbox-background-color: #313743;
   }
 }

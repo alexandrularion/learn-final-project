@@ -1,10 +1,13 @@
 import Container from "./jobs-page.styled";
 import AppLayout from "../../common/layouts/app-layout/app-layout";
+import Search from "../../components/search/search";
 
 const JobsPage = () => {
   return (
     <AppLayout>
-      <Container>my page</Container>
+      <Container>
+        <Search />
+      </Container>
     </AppLayout>
   );
 };
