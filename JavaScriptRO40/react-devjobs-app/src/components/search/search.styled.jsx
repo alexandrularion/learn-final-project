@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.form`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 80px;
   border-radius: 6px;
@@ -44,7 +45,6 @@ const Container = styled.div`
       height: 24px;
       background: var(--checkbox-background-color);
       border: none;
-      appearance: none;
       outline: none;
       border-radius: 3px;
     }
