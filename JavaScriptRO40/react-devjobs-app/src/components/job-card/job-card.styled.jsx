@@ -7,6 +7,7 @@ const Container = styled.div`
   background-color: var(--background-color-2);
   border-radius: 6px;
   gap: 20px;
+  cursor: pointer;
 
   .job_card__logo {
     width: 50px;
