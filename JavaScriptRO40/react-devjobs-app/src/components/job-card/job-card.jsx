@@ -3,8 +3,11 @@ import Text from "../../common/components/text/text";
 import Heading from "../../common/components/heading/heading";
 import React from "react";
 import utils from "../../common/utils";
+import { useNavigate } from "react-router-dom";
 
 const JobCard = (props) => {
+  const navigate = useNavigate();
+
   const formatedType = React.useMemo(
     () => utils.getJobType(props.type),
     [props.type]
@@ -13,9 +16,14 @@ const JobCard = (props) => {
     () => utils.getTimeAgo(props.createdAt),
     [props.createdAt]
   );
+  const jobUrl = React.useMemo(() => `/jobs/${props.id}`, [props]);
+
+  const handleUrlClick = () => {
+    navigate(jobUrl);
+  };
 
   return (
-    <Container>
+    <Container onClick={handleUrlClick}>
       <div className="job_card__logo">
         <img src={props.companyLogo} alt="Company Logo" />
       </div>

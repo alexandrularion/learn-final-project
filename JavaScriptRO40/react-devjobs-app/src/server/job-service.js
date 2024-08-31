@@ -3,27 +3,28 @@ import {
   addDoc,
   deleteDoc,
   getDocs,
+  getDoc,
   doc,
   query,
   where,
 } from "firebase/firestore";
 import { firestoreDatabase } from "./firebase";
 
+const collectionRef = collection(firestoreDatabase, "job");
+
 const jobService = {
   create: async (payload) => {
     try {
-      const collectionRef = collection(firestoreDatabase, "job");
       const documentRef = await addDoc(collectionRef, payload);
       console.log(documentRef.id);
     } catch (e) {
       console.error(`[ERROR-FIREBASE]: Create job, ${e}`);
     }
   },
-  readByFilters: async (filters) => {
+  readByFilters: async (filters = []) => {
     try {
       const result = [];
 
-      const collectionRef = collection(firestoreDatabase, "job");
       const q = query(
         collectionRef,
         ...filters.map((f) => where(f.field, f.op, f.value))
@@ -40,9 +41,17 @@ const jobService = {
       console.error(`[ERROR-FIREBASE]: Read jobs by filters, ${e}`);
     }
   },
+  readById: async (id) => {
+    try {
+      const docRef = doc(collectionRef, id);
+      const docSnap = await getDoc(docRef);
+      return docSnap.data();
+    } catch (e) {
+      console.error(`[ERROR-FIREBASE]: Read job by id, ${e}`);
+    }
+  },
   delete: async (id) => {
     try {
-      const collectionRef = collection(firestoreDatabase, "job");
       const docRef = doc(collectionRef, id);
       await deleteDoc(docRef);
     } catch (e) {
