@@ -4,8 +4,11 @@ import Heading from "../../common/components/heading/heading";
 import React from "react";
 import utils from "../../common/utils";
 import { Link } from "react-router-dom";
+import jobService from "../../server/job-service";
 
 const JobCard = (props) => {
+  const [isLoading, setIsLoading] = React.useState(false);
+
   const formatedType = React.useMemo(
     () => utils.getJobType(props.type),
     [props.type]
@@ -15,11 +18,22 @@ const JobCard = (props) => {
     [props.createdAt]
   );
 
+  const handleDelete = async () => {
+    setIsLoading(true);
+    await jobService.delete(props.id);
+    setIsLoading(false);
+  };
+
   return (
     <Link to={`/jobs/${props.id}`}>
       <Container>
         <div className="job_card__logo">
           <img src={props.companyLogo} alt="Company Logo" />
+        </div>
+        <div className="job_card__actions">
+          <button onClick={handleDelete}>
+            {isLoading ? "Loading..." : "Remove"}
+          </button>
         </div>
         <div className="job_card__container">
           <div className="job_card__info">
