@@ -2,7 +2,13 @@ import Container from "./button.styled";
 
 const Button = (props) => {
   return (
-    <Container disabled={props.disabled} variant={props.variant}>
+    <Container
+      form={props.form}
+      onClick={props.onClick}
+      type={props.type}
+      disabled={props.disabled}
+      variant={props.variant}
+    >
       {props.children}
     </Container>
   );

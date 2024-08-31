@@ -8,7 +8,6 @@ const Container = styled.form`
   height: 80px;
   border-radius: 6px;
   padding: 0 16px;
-  gap: 62px;
   background-color: var(--background-color-2);
 
   .search__hr {

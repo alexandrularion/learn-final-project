@@ -51,6 +51,7 @@ a {
   --button-text-color-1: #fff;
   --button-text-color-2: #5964e0;
   --button-text-color-3: #ab0202;
+  --button-text-color-hover-2: #939bf4;
   --button-font-weight: 700;
 }
 
@@ -62,8 +63,6 @@ a {
     --heading-color: #fff;
     --text-color: #6e8098;
 
-    --button-background-color-2: rgba(89, 100, 224, 0.1);
-    --button-background-hover-color-2: rgba(89, 100, 224, 0.35);
     --button-text-color-hover-3: #ca0000;
     --checkbox-background-color: #313743;
   }

@@ -4,6 +4,7 @@ import LocationSvg from "../../assets/location.svg?react";
 import SearchSvg from "../../assets/search.svg?react";
 import jobService from "../../server/job-service";
 import CONSTANTS from "../../common/constants";
+import CreateDialog from "../create-dialog/create-dialog";
 
 const Search = (props) => {
   const handleSubmit = async (event) => {
@@ -50,11 +51,7 @@ const Search = (props) => {
     <Container onSubmit={handleSubmit}>
       <div className="search__input search__input--1">
         <SearchSvg />
-        <input
-          type="text"
-          name="search"
-          placeholder="Filter by title, companies, expertise…"
-        />
+        <input type="text" name="search" placeholder="Filter by job title" />
       </div>
       <hr className="search__hr" />
       <div className="search__input search__input--2">
@@ -69,6 +66,8 @@ const Search = (props) => {
       <Button disabled={props.isLoading} type="submit">
         {props.isLoading ? "Loading..." : "Search"}
       </Button>
+      <hr className="search__hr" />
+      <CreateDialog />
     </Container>
   );
 };
