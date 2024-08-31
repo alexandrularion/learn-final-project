@@ -61,8 +61,6 @@ a {
     --heading-color: #fff;
     --text-color: #6e8098;
 
-    --button-background-color-2: rgba(255, 255, 255, 0.1);
-    --button-background-hover-color-2: rgba(255, 255, 255, 0.35);
     --checkbox-background-color: #313743;
   }
 }

@@ -35,6 +35,9 @@ const Container = styled.div`
     }
     .job_card__badge {
       padding-top: 20px;
+      h4 {
+        color: var(--badge-color);
+      }
     }
   }
 `;

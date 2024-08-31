@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 const Container = styled.button`
   display: flex;
+  align-items: center;
   width: max-content;
-  padding: 16px 39px;
+  height: 48px;
+  padding: 0 39px;
   border-radius: 5px;
   font-size: var(--text-font-size);
   line-height: var(--text-line-height);
