@@ -50,6 +50,8 @@ a {
   --button-background-hover-color-2: rgba(89, 100, 224, 0.35);
   --button-text-color-1: #fff;
   --button-text-color-2: #5964e0;
+  --button-text-color-3: #ab0202;
+  --button-text-color-hover-3: #ff2424;
   --button-font-weight: 700;
 }
 

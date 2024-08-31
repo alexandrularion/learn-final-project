@@ -13,6 +13,7 @@ const Container = styled.button`
   outline: none;
   appearance: none;
   border: none;
+  cursor: pointer;
   transition: 0.2s all ease-in-out;
   background-color: ${(props) => {
     switch (props.variant) {

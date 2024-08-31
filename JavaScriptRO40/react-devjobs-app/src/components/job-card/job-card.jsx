@@ -4,9 +4,12 @@ import Heading from "../../common/components/heading/heading";
 import React from "react";
 import utils from "../../common/utils";
 import { useNavigate } from "react-router-dom";
+import Button from "../../common/components/button/button";
+import jobService from "../../server/job-service";
 
 const JobCard = (props) => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = React.useState(false);
 
   const formatedType = React.useMemo(
     () => utils.getJobType(props.type),
@@ -22,10 +25,25 @@ const JobCard = (props) => {
     navigate(jobUrl);
   };
 
+  const handleDeleteClick = async (event) => {
+    event.stopPropagation();
+    setIsLoading(true);
+    await jobService.delete(props.id);
+    props.setJobs((currentJobs) =>
+      currentJobs.filter((currentJob) => currentJob.id !== props.id)
+    );
+    setIsLoading(false);
+  };
+
   return (
     <Container onClick={handleUrlClick}>
       <div className="job_card__logo">
         <img src={props.companyLogo} alt="Company Logo" />
+      </div>
+      <div className="job_card__actions">
+        <Button onClick={handleDeleteClick}>
+          {isLoading ? "Loading..." : "Delete"}
+        </Button>
       </div>
       <div className="job_card__container">
         <div className="job_card__info">

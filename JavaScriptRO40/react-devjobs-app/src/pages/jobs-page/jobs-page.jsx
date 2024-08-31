@@ -38,6 +38,7 @@ const JobsPage = () => {
                 type={job.type}
                 companyName={job.companyName}
                 companyLogo={job.companyLogo}
+                setJobs={setJobs}
               />
             ))
           ) : (

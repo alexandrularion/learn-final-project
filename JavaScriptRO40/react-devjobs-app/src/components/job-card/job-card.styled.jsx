@@ -8,6 +8,7 @@ const Container = styled.div`
   border-radius: 6px;
   gap: 20px;
   cursor: pointer;
+  position: relative;
 
   .job_card__logo {
     width: 50px;
@@ -22,7 +23,23 @@ const Container = styled.div`
       object-fit: cover;
     }
   }
+  .job_card__actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 15;
 
+    button {
+      background: none;
+      padding: 5px 10px;
+      color: var(--button-text-color-3);
+
+      &:hover {
+        background: none;
+        color: var(--button-text-color-hover-3);
+      }
+    }
+  }
   .job_card__container {
     display: flex;
     flex-direction: column;
