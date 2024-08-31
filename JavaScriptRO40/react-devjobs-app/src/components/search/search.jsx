@@ -3,6 +3,7 @@ import Button from "../../common/components/button/button";
 import LocationSvg from "../../assets/location.svg?react";
 import SearchSvg from "../../assets/search.svg?react";
 import jobService from "../../server/job-service";
+import CreateDialog from "../create-dialog/create-dialog";
 
 const Search = (props) => {
   const { isLoading, setIsLoading, setJobs } = props;
@@ -70,6 +71,8 @@ const Search = (props) => {
       <Button form="search_form" type="submit" disabled={isLoading}>
         {isLoading ? "Loading..." : "Search"}
       </Button>
+      <hr className="search__hr" />
+      <CreateDialog />
     </Container>
   );
 };
