@@ -25,10 +25,13 @@
   --heading-color: #333333;
   --text-color: #737373;
 
+  --box-shadow: 0 0 32px #633cff40;
   --border-color: #d9d9d9;
   --error-color: #ff3939;
   --background-color-1: #fafafa;
   --background-color-2: #fff;
+  --button-color-1: #fff;
+  --button-color-2: #633cff;
 
   --heading-size-1: 32px;
   --heading-line-1: 1.5;
