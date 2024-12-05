@@ -6,6 +6,7 @@ const Container = styled.div`
   align-items: center;
   height: 48px;
   border-radius: 8px;
+  padding: 0 16px;
   border: 1px solid
     ${(props) => {
       if (props.isErrorVisible) {
@@ -14,10 +15,13 @@ const Container = styled.div`
       return "var(--border-color)";
     }};
   font-family: "Instrument Sans", sans-serif;
+  transition: 0.2s ease-in-out all;
 
   div {
     display: flex;
     align-items: center;
+    flex: 1 1;
+    height: 100%;
     gap: 12px;
 
     input {
@@ -40,6 +44,7 @@ const Container = styled.div`
     }
   }
   p {
+    padding-left: 12px;
     color: var(--error-color);
     font-size: var(--text-size-2);
     line-height: var(--text-line-2);
@@ -47,6 +52,7 @@ const Container = styled.div`
   }
 
   &:focus-within {
+    box-shadow: var(--box-shadow);
     caret-color: var(--app-color-1);
     border: 1px solid
       ${(props) => {
