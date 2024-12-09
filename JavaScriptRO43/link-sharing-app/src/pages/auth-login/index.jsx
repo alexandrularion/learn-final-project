@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
+import { AuthLayout } from "../../common";
 import Container from "./index.styled";
 
-const AuthLoginPage = (props) => {
-  return <Container>Our nice template component {props.children}</Container>;
-};
-
-AuthLoginPage.propTypes = {
-  children: PropTypes.element,
+const AuthLoginPage = () => {
+  return (
+    <AuthLayout>
+      <Container>{/* other components */} Login page</Container>
+    </AuthLayout>
+  );
 };
 
 export default AuthLoginPage;
