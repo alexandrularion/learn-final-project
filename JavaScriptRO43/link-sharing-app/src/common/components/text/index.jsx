@@ -2,7 +2,11 @@ import PropTypes from "prop-types";
 import Container from "./index.styled";
 
 const Text = (props) => {
-  return <Container size={props.size}>{props.children}</Container>;
+  return (
+    <Container size={props.size} {...props}>
+      {props.children}
+    </Container>
+  );
 };
 
 Text.propTypes = {
