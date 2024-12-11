@@ -8,6 +8,7 @@ const TextField = (props) => {
         {props.isIconVisible ? props.iconChildren : null}
         <input
           id={props.id}
+          type={props.type}
           name={props.name}
           onChange={props.onChange}
           onBlur={props.onBlur}

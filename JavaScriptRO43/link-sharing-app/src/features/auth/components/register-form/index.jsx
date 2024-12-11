@@ -34,6 +34,7 @@ const RegisterForm = () => {
         </Text>
         <TextField
           id="create__password"
+          type="password"
           isIconVisible={true}
           iconChildren={<LockIcon />}
           placeholder="At least 8 characters"
@@ -50,6 +51,7 @@ const RegisterForm = () => {
         </Text>
         <TextField
           id="confirm__password"
+          type="password"
           isIconVisible={true}
           iconChildren={<LockIcon />}
           placeholder="At least 8 characters"

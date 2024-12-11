@@ -34,6 +34,7 @@ const LoginForm = () => {
         </Text>
         <TextField
           id="password"
+          type="password"
           isIconVisible={true}
           iconChildren={<LockIcon />}
           placeholder="Enter your password"
