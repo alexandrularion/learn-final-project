@@ -7,6 +7,7 @@ import {
   AuthRegisterPage,
   LinksPage,
   PreviewPage,
+  ProfilePage,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/preview/:userId",
     Component: PreviewPage,
+  },
+  {
+    path: "/profile/:userId",
+    Component: ProfilePage,
   },
   {
     path: "/auth",

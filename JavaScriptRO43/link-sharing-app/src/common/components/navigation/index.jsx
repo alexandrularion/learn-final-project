@@ -26,7 +26,8 @@ const Navigation = () => {
             isActive ? "links__route links__route--active" : "links__route"
           }
           end={true}
-          to="/profile"
+          // TODO: Replace with actual id
+          to="/profile/123123"
         >
           <ProfileIcon />
           Profile
