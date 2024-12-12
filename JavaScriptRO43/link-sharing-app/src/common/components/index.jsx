@@ -5,3 +5,5 @@ export { default as DropdownField } from "./dropdown-field";
 export { default as Text } from "./text";
 export { default as Header } from "./header";
 export { default as Navigation } from "./navigation";
+export { default as PreviewCard } from "./preview-card";
+export { default as PreviewLink } from "./preview-link";

@@ -2,3 +2,5 @@
 export * from "./components";
 // Export all component layouts within "layouts" folder
 export * from "./layouts";
+// Export constants
+export { default as CONSTANTS } from "./index.constants";
