@@ -4,7 +4,12 @@ import { Navigation, PreviewCard } from "../../components";
 
 const AppLayout = (props) => {
   // TODO: Fetch data for preview card
-  const links = [{ type: "github", urlSuffix: "/alexandrularion" }];
+  const links = [
+    { type: "github", urlSuffix: "/alexandrularion" },
+    { type: "youtube", urlSuffix: "/alexandrularion" },
+    { type: "facebook", urlSuffix: "/alexandrularion" },
+    { type: "twitch", urlSuffix: "/alexandrularion" },
+  ];
 
   return (
     <Container>

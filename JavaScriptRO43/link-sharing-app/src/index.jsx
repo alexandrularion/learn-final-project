@@ -2,12 +2,21 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import { AuthLoginPage, AuthRegisterPage, LinksPage } from "./pages";
+import {
+  AuthLoginPage,
+  AuthRegisterPage,
+  LinksPage,
+  PreviewPage,
+} from "./pages";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: LinksPage,
+  },
+  {
+    path: "/preview/:userId",
+    Component: PreviewPage,
   },
   {
     path: "/auth",

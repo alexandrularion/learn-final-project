@@ -33,7 +33,7 @@ const Navigation = () => {
         </NavLink>
       </div>
       {/* TODO: Replace slug with actual id */}
-      <Link to="/links/preview/:slug">
+      <Link to="/preview/1231231">
         <Button variant="outline">Preview</Button>
       </Link>
     </Container>

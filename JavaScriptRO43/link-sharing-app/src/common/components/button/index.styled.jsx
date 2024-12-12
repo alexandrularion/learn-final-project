@@ -9,7 +9,7 @@ const Container = styled.button`
   appearance: none;
   border-radius: 8px;
   transition: 0.2s ease-in-out all;
-  padding: 25px;
+  padding: 0 25px;
   cursor: pointer;
   border: ${(props) => {
     switch (props.variant) {
