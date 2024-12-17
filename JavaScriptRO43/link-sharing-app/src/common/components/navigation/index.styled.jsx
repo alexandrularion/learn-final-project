@@ -48,6 +48,16 @@ const Container = styled.section`
       }
     }
   }
+  .container__buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .buttons__logout {
+      border-color: var(--error-color);
+      color: var(--error-color);
+    }
+  }
 `;
 
 export default Container;
