@@ -1,17 +1,12 @@
+import PropTypes from "prop-types";
 import { PreviewCard } from "../../../../common";
 import Container from "./index.styled";
 
-const PreviewProfile = () => {
-  // TODO: Fetch data for preview card
-  const links = [
-    { type: "youtube", urlSuffix: "/alexandrularion" },
-    { type: "facebook", urlSuffix: "/alexandrularion" },
-  ];
-
+const PreviewProfile = (props) => {
   return (
     <Container>
       <PreviewCard
-        links={links}
+        links={props.links}
         asProfile={true}
         profile={{
           image:
@@ -24,6 +19,8 @@ const PreviewProfile = () => {
   );
 };
 
-PreviewProfile.propTypes = {};
+PreviewProfile.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default PreviewProfile;

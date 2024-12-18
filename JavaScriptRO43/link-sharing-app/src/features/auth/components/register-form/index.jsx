@@ -82,6 +82,7 @@ const RegisterForm = () => {
 
     if (newUser) {
       localStorage.setItem("id_token", newUser.idToken); // Tip: Save the id token to check if the user is logged in or not
+      localStorage.setItem("user_id", newUser.localId); // Tip: Save the id of the user to make future requests
       await navigate("/"); // Tip: "/" means the links page
       toast("Your account has been created.", { type: "success" });
     } else {

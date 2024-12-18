@@ -64,6 +64,7 @@ const LoginForm = () => {
 
     if (user) {
       localStorage.setItem("id_token", user.idToken); // Tip: Save the id token to check if the user is logged in or not
+      localStorage.setItem("user_id", user.localId); // Tip: Save the id of the user to make future requests
       await navigate("/"); // Tip: "/" means the links page
       toast("Your have been logged in succesfully.", { type: "success" });
     } else {
