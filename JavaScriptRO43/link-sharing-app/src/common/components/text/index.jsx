@@ -10,7 +10,7 @@ const Text = (props) => {
 };
 
 Text.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   size: PropTypes.oneOf(["sm", "md"]),
 };
 

@@ -8,12 +8,13 @@ const Container = styled.main`
   padding: 24px;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 
   .container__layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    height: 100%;
+    height: calc(100vh - 150px);
 
     .layout__preview {
       display: flex;
@@ -27,6 +28,7 @@ const Container = styled.main`
       flex-direction: column;
       background-color: var(--background-color-2);
       border-radius: 12px;
+      overflow-y: auto;
     }
   }
 `;

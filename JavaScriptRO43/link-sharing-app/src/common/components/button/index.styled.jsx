@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const Container = styled.button`
+const Container = styled("button").withConfig({
+  shouldForwardProp: (prop) => !["variant"].includes(prop),
+})`
   display: flex;
   align-items: center;
   justify-content: center;

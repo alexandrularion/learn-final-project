@@ -14,11 +14,7 @@ const DropdownField = (props) => {
           onFocus={props.onFocus}
           value={props.value}
           required={props.required}
-          defaultValue={"placeholder"}
         >
-          <option value="placeholder" disabled={true}>
-            Select an option
-          </option>
           {props.options &&
           Array.isArray(props.options) &&
           props.options.length > 0
@@ -45,7 +41,7 @@ DropdownField.propTypes = {
   onFocus: PropTypes.func,
   required: PropTypes.bool,
   name: PropTypes.string,
-  value: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   options: PropTypes.array,
 };
 

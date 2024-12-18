@@ -30,20 +30,14 @@ const PreviewCard = (props) => {
         </div>
       ) : null}
       <div className="container__links">
-        {props.links.map(({ type, urlSuffix }) => {
-          const {
-            id,
-            icon: Icon,
-            name,
-            color,
-            urlPrefix,
-          } = CONSTANTS.PLATFORMS[type];
+        {props.links.map(({ platform, url }) => {
+          const { id, icon: Icon, name, color } = CONSTANTS.PLATFORMS[platform];
           return (
             <PreviewLink
               key={id}
               iconChildren={<Icon />}
               bkgColor={color}
-              url={`${urlPrefix}${urlSuffix}`}
+              url={url}
             >
               {name}
             </PreviewLink>

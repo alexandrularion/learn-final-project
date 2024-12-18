@@ -22,7 +22,7 @@ const PreviewLink = (props) => {
 };
 
 PreviewLink.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   iconChildren: PropTypes.element,
   onClick: PropTypes.func,
   bkgColor: PropTypes.string,

@@ -5,15 +5,24 @@ import LinkIcon from "../../../assets/ph_lock-key-fill.svg?react";
 import ProfileIcon from "../../../assets/ph_user-circle-bold.svg?react";
 import Api from "../../../api";
 import { toast } from "react-toastify";
+import React from "react";
 
 const Navigation = () => {
   const navigate = useNavigate();
+  const [profileUrl, setProfileUrl] = React.useState("/");
+  const [previewUrl, setPreviewUrl] = React.useState("/");
 
   const handleLogout = async () => {
     Api.user.logout();
     await navigate("/auth/login");
     toast("You have been logged out.", { type: "success" });
   };
+
+  React.useEffect(() => {
+    const userId = localStorage.getItem("user_id");
+    setProfileUrl(`/profile/${userId}`);
+    setPreviewUrl(`/preview/${userId}`);
+  }, []);
 
   return (
     <Container>
@@ -36,8 +45,7 @@ const Navigation = () => {
             isActive ? "links__route links__route--active" : "links__route"
           }
           end={true}
-          // TODO: Replace with actual id
-          to="/profile/123123"
+          to={profileUrl}
         >
           <ProfileIcon />
           Profile
@@ -51,8 +59,7 @@ const Navigation = () => {
         >
           Logout
         </Button>
-        {/* TODO: Replace slug with actual id */}
-        <Link to="/preview/1231231">
+        <Link to={previewUrl}>
           <Button variant="fill">Preview</Button>
         </Link>
       </div>
