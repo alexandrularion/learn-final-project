@@ -23,7 +23,36 @@ const Container = styled.section`
       height: 100%;
     }
   }
+  .container__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    width: 100%;
+    height: 320px;
 
+    .profile__img {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      .profile__img {
+      }
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .profile__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   .container__links {
     display: flex;
     flex-direction: column;
