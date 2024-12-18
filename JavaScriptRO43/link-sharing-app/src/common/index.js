@@ -4,3 +4,5 @@ export * from "./components";
 export * from "./layouts";
 // Export constants
 export { default as CONSTANTS } from "./index.constants";
+// Export router
+export * from "./router";

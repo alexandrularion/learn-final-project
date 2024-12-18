@@ -10,11 +10,16 @@ import {
   ProfilePage,
 } from "./pages";
 import { ToastContainer } from "react-toastify";
+import { AuthRoute, ProtectedRoute } from "./common";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: LinksPage,
+    element: (
+      <ProtectedRoute>
+        <LinksPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/preview/:userId",
@@ -22,18 +27,30 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile/:userId",
-    Component: ProfilePage,
+    element: (
+      <ProtectedRoute>
+        <ProfilePage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/auth",
     children: [
       {
         path: "/auth/login",
-        Component: AuthLoginPage,
+        element: (
+          <AuthRoute>
+            <AuthLoginPage />
+          </AuthRoute>
+        ),
       },
       {
         path: "/auth/register",
-        Component: AuthRegisterPage,
+        element: (
+          <AuthRoute>
+            <AuthRegisterPage />
+          </AuthRoute>
+        ),
       },
     ],
   },
