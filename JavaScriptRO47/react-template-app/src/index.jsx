@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route index={true} element={<HomePage />} />
-        <Route path="/template" element={hocs.WithAuth(TemplatePage)} />
+        <Route path="/template" element={hocs.withAuthSession(TemplatePage)} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

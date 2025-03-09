@@ -1,7 +1,20 @@
 import styled from "styled-components";
+import hooks from "../common/hooks";
 
 const HomePage = () => {
-  return <Container>My Page</Container>;
+  const session = hooks.useAuthSession();
+
+  console.log(session);
+
+  return (
+    <Container>
+      {session.isLoading ? (
+        "Loading..."
+      ) : session.isAuthenticated ? (
+        <button>Post an ad</button>
+      ) : null}
+    </Container>
+  );
 };
 
 const Container = styled.main`
